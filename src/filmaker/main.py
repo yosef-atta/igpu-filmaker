@@ -2,12 +2,16 @@
 
 from __future__ import annotations
 
+import logging
 import sys
 from pathlib import Path
 
 from PySide6.QtCore import QUrl
 from PySide6.QtGui import QGuiApplication
 from PySide6.QtQml import QQmlApplicationEngine
+
+from filmaker.hardware.decoding import configure_decoding
+from filmaker.media.controller import MediaController
 
 
 def qml_entrypoint() -> Path:
@@ -17,8 +21,12 @@ def qml_entrypoint() -> Path:
 
 def main() -> int:
     """Start Qt Quick; return a nonzero status when the UI cannot load."""
+    logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
+    configure_decoding()
     app = QGuiApplication(sys.argv)
     engine = QQmlApplicationEngine()
+    controller = MediaController(app)
+    engine.rootContext().setContextProperty("mediaController", controller)
     engine.load(QUrl.fromLocalFile(str(qml_entrypoint())))
     if not engine.rootObjects():
         return 1
