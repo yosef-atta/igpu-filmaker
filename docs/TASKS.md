@@ -5,10 +5,10 @@
 **Goal:** Demonstrate an end-to-end editing workflow with a valid final export on Windows and Linux.
 
 ## POC-01 — Foundation
-- [ ] Set up Python project with `uv`, src layout, Python version policy, Ruff and pytest.
-- [ ] Bootstrap PySide6/QML application; confirm launch on Windows and Linux.
-- [ ] Define internal boundaries (project model, media, timeline, preview, export, hardware).
-- [ ] Add basic CI for Python checks on Windows and Linux.
+- [x] Set up Python project with `uv`, src layout, Python version policy, Ruff and pytest.
+- [x] Bootstrap PySide6/QML application; confirm launch on Windows and Linux.
+- [x] Define internal boundaries (project model, media, timeline, preview, export, hardware).
+- [x] Add basic CI for Python checks on Windows and Linux.
 
 ## POC-02 — Media and playback
 - [ ] Probe/import at least two MP4 videos and an audio file; collect stream metadata.
