@@ -11,10 +11,10 @@
 - [x] Add basic CI for Python checks on Windows and Linux.
 
 ## POC-02 — Media and playback
-- [ ] Probe/import at least two MP4 videos and an audio file; collect stream metadata.
-- [ ] Implement play/pause and seeking for a single source in the preview.
-- [ ] Detect video acceleration capabilities and log the backend actually used.
-- [ ] Handle missing media, decode errors, and software fallback gracefully.
+- [x] Probe/import at least two MP4 videos and an audio file; collect stream metadata.
+- [x] Implement play/pause and seeking for a single source in the preview.
+- [x] Detect video acceleration capabilities and log the backend actually used.
+- [x] Handle missing media, decode errors, and software fallback gracefully.
 
 ## POC-03 — Timeline and project
 - [ ] Define rational/timebase-aware clip timings and non-destructive edit model.
